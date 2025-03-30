@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstheorie</title>
+  <link rel="shortcut icon" href="/images/favicons/">
+  <script src="https://kit.fontawesome.com/082fb86726.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.7.2/dist/svgMap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.7.2/dist/svgMap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    .active {
+      font-weight: bold !important;
+    }
+
+    ul.timeline {
+      list-style-type: none;
+      position: relative;
+    }
+
+    ul.timeline:before {
+      content: ' ';
+      background: #d4d9df;
+      display: inline-block;
+      position: absolute;
+      left: 29px;
+      width: 2px;
+      height: 100%;
+      z-index: 400;
+    }
+
+    ul.timeline>li {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    ul.timeline>li:before {
+      content: ' ';
+      background: white;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid #22c0e8;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      z-index: 400;
+    }
+    .svgMap-map-wrapper {
+      background-color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <div style="display: block; height:10px;"></div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="border-radius: 5px;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="" width="80" class="d-inline-block align-text-center">
+        Bootstheorie
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Regulatorisches</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="tos.html">Terms of Service</a></li>
+              <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Über Uns</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="about.html">Über Bootstheorie</a></li>
+              <li><a class="dropdown-item" href="contact.html">Kontakt</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div style="display: block; height: 10px;"></div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="row" style="padding-bottom: 400px;">
+      <h1 class="text-center">Über Bootstheorie</h1>
+      <p class="text-center">Unten siehst du einen Überblich unserer wichtigsten Meilensteine</p>
+      <div class="container mt-5 mb-5">
+        <div class="col-md-6 offset-md-3">
+          <div class="row" style="display: flex; justify-content: center;">
+            <!---
+            <h4 class="text-center">World Map</h4>
+            <div id="svgMap" style="width: 600px; height: 600px;">
+              <script>
+                new svgMap({
+                  targetElementID: 'svgMap',
+                  data: {
+                    data: {
+                      users: {
+                        name: 'Kiwi Flashcards Users:',
+                        format: '{0}',
+                        thousandSeparator: ',',
+                        thresholdMax: 50000,
+                        thresholdMin: 1000
+                      },
+                    },
+                    applyData: 'users',
+                    values: {
+                      DE: { users: 390, color: '#30AF01' },
+                      IN: { users: 192, color: '#30AF01' },
+                      SA: { users: 91, color: '#30AF01' },
+                      JO: { users: 40, color: '#30AF01' },
+                      SE: { users: 41, color: '#30AF01' },
+                      UK: { users: 43, color: '#30AF01' },
+                      US: { users: 45, color: '#30AF01' },
+                      AT: { users: 30, color: '#30AF01' },
+                      FR: { users: 31, color: '#30AF01' },
+                      IE: { users: 33, color: '#30AF01' },
+                      IT: { users: 32, color: '#30AF01' },
+                      PL: { users: 35, color: '#30AF01' },
+                      ZA: { users: 20, color: '#30AF01' },
+                      ZA: { users: 20, color: '#30AF01' },
+                      ZA: { users: 20, color: '#30AF01' },
+                      // ...
+                    }
+                  },
+                  flagType: 'emoji',
+                  initialZoom: 0.2,
+                });
+              </script>-->
+              <h4 class="text-center">Timeline</h4>
+              <ul class="timeline">
+                <li>
+                  <b target="_blank" href="">Bootstheorie (1.0) 🎉</b>
+                  <p class="float-right">25 September, 2023</p>
+                  <p>
+                    Nach viel Arbeit ist endlich die Bootstheorie App zum download verfügbar. 
+                  </p>
+                </li>
+   
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<footer class="text-center">
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!--  
+      <a class="btn btn-outline-dark btn-floating m-1" href="https://www.instagram.com/productivityWidgets" role="button">
+        <i class="fab fa-instagram"></i>
+      </a>
+      -->
+    </section>
+  </div>
+  <!-- Copyright -->
+  <div class="text-center p-3">
+
+    <p> © 2023 HD App Development</p>
+  </div>
+</html>
