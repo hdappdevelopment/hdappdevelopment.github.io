@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HD App Development</title>
+    <!--- <link rel="icon" type="image/x-icon" href="/images/favicons/favicon-16x16.ico"> --->
+    <script src="https://kit.fontawesome.com/082fb86726.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .active  {
+          font-weight: bold !important;
+        }
+        .center-align-list{
+          display: flex;
+          justify-content: center;
+          margin: auto;
+        }
+
+        .center-align-list li {
+          text-align: left;
+        }
+        body {
+          background-color: #ffffff; /* Hex code for green */
+        }
+
+        /* Added CSS for larger screen devices */
+        @media (min-width: 768px) {
+          .container-logo-h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .logo {
+            margin-right: 20px;
+          }
+
+          .content-container {
+            display: flex;
+            align-items: center;
+          }
+
+          .content-container .col-lg-6 {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+          }
+
+          .content-container .col-lg-6 img {
+            margin-right: 20px;
+            margin-bottom: 10px; /* Added space between the image and the buttons */
+          }
+
+          /* Make the App Store icon wider */
+          .content-container .col-lg-6 .appstore-link img {
+            width: 200px; /* Updated width for the App Store icon */
+          }
+
+          /* Added space between the website link and the App Store icon */
+          .content-container .col-lg-6 .btn {
+            margin-top: 10px;
+          }
+
+          /* Added space between the website link and the App Store icon */
+          .spacer {
+            height: 50px;
+            width: 100%;
+          }
+
+          /* Adjust social media buttons on big screens */
+          .content-container .col-lg-6 .social-media-links {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center the buttons horizontally */
+          }
+
+          .content-container .col-lg-6 .social-media-links .btn {
+            margin: 5px;
+          }
+
+          /* Ensure buttons are in the same row */
+          .content-container .col-lg-6 .social-media-links .btn, .content-container .col-lg-6 .website-btn {
+            display: inline-block;
+          }
+
+        }
+
+        /* Additional CSS for smaller screen devices */
+        @media (max-width: 767px) {
+          .content-container .col-lg-6 .social-media-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px; /* Add 10px space above the social media buttons */
+          }
+
+          .content-container .col-lg-6 .website-btn {
+            margin-top: 5px; /* Set margin between website link and Instagram button */
+          }
+        }
+        /* Blinking Underscore Animation */
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .blinking-underscore {
+            display: inline-block;
+            position: relative;
+        }
+
+        .blinking-underscore::after {
+            content: "_";
+            animation: blink 1s step-start infinite;
+        }       
+    </style>
+</head>
+<body>
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <div style="display: block; height:10px;"></div>
+
+  <!-- Content -->
+  <div class="container text-center"> <!-- Apply text-center to the container -->
+    <!-- Updated HTML structure for logo and h1 text -->
+    <div class="container-logo-h1">
+      <!-- Commented out the logo part -->
+      
+
+      
+      <h1>Impressum</h1>
+    </div>
+    <!-- Center the row containing images and headings -->
+    <div class="row justify-content-center">
+      <div class="col-lg-9 content-center">
+        <div class="text-center m-1 mb-4">
+          <div class="text-center m-1 mb-4">
+            <h5>Honl Dugstad App Development GbR</h5>
+            <p>Oderstraße 55, 55131 Mainz</p>
+            <a href="mailto:info@hdappdevelopment.com">info@hdappdevelopment.com</a>
+          </div>
+        </div>
+        
+  
+      </div>
+    </div>
+  </div>
+  <!-- jQuery Slim -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  
+  <!-- Footer -->
+  <footer class="text-center p-3 d-block">
+    <p> © 2023 HD App Development</p>
+  </footer>
+</body>
+</html>
