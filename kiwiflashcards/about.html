@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiwi Flashcards</title>
+  <link rel="shortcut icon" href="/images/favicons/">
+  <script src="https://kit.fontawesome.com/082fb86726.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.7.2/dist/svgMap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.7.2/dist/svgMap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    .active {
+      font-weight: bold !important;
+    }
+
+    ul.timeline {
+      list-style-type: none;
+      position: relative;
+    }
+
+    ul.timeline:before {
+      content: ' ';
+      background: #d4d9df;
+      display: inline-block;
+      position: absolute;
+      left: 29px;
+      width: 2px;
+      height: 100%;
+      z-index: 400;
+    }
+
+    ul.timeline>li {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    ul.timeline>li:before {
+      content: ' ';
+      background: white;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid #22c0e8;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      z-index: 400;
+    }
+    .svgMap-map-wrapper {
+      background-color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <div style="display: block; height:10px;"></div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="border-radius: 5px;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="" width="80" class="d-inline-block align-text-center">
+        Kiwi Flashcards
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Regulatory</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="tos.html">Terms of Service</a></li>
+              <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About Us</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="about.html">Who We Are</a></li>
+              <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wishes.html">Feature Wishes</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div style="display: block; height: 10px;"></div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="row" style="padding-bottom: 400px;">
+      <h1 class="text-center">About Kiwi Flashcards</h1>
+      <p class="text-center">Want to know how it all started? Check out important milestones of Kiwi Flashcards.</p>
+      <div class="container mt-5 mb-5">
+        <div class="col-md-6 offset-md-3">
+          <div class="row" style="display: flex; justify-content: center;">
+            <h4 class="text-center">World Map</h4>
+            <div id="svgMap" style="width: 600px; height: 600px;">
+              <script>
+                new svgMap({
+                  targetElementID: 'svgMap',
+                  data: {
+                    data: {
+                      users: {
+                        name: 'Kiwi Flashcards Users:',
+                        format: '{0}',
+                        thousandSeparator: ',',
+                        thresholdMax: 50000,
+                        thresholdMin: 1000
+                      },
+                    },
+                    applyData: 'users',
+                    values: {
+                      DE: { users: 1087, color: '#30AF01' },
+                      IN: { users: 230, color: '#30AF01' },
+                      SA: { users: 192, color: '#30AF01' },
+                      US: { users: 174, color: '#30AF01' },
+                      GB: { users: 159, color: '#30AF01' },
+                      JO: { users: 137, color: '#30AF01' },
+                      FR: { users: 124, color: '#30AF01' },
+                      SE: { users: 109, color: '#30AF01' },
+                      AT: { users: 94, color: '#30AF01' },
+                      IT: { users: 88, color: '#30AF01' },
+                      IE: { users: 83, color: '#30AF01' },
+                      QA: { users: 75, color: '#30AF01' },
+                      ZA: { users: 68, color: '#30AF01' },
+                      PH: { users: 61, color: '#30AF01' },
+                      PL: { users: 55, color: '#30AF01' },
+                      EG: { users: 49, color: '#30AF01' },
+                      PE: { users: 44, color: '#30AF01' },
+                      MX: { users: 39, color: '#30AF01' },
+                      KZ: { users: 35, color: '#30AF01' },
+                      CH: { users: 31, color: '#30AF01' },
+                      AU: { users: 27, color: '#30AF01' },
+                      TR: { users: 23, color: '#30AF01' },
+                      OM: { users: 20, color: '#30AF01' },
+                      KW: { users: 17, color: '#30AF01' },
+                      CA: { users: 14, color: '#30AF01' },
+                      CL: { users: 11, color: '#30AF01' },
+                      NL: { users: 9, color: '#30AF01' },
+                      AL: { users: 7, color: '#30AF01' },
+                      ES: { users: 6, color: '#30AF01' },
+                      BE: { users: 5, color: '#30AF01' },
+                      SK: { users: 4, color: '#30AF01' },
+                      IL: { users: 3, color: '#30AF01' },
+                      FI: { users: 2, color: '#30AF01' },
+                      GR: { users: 2, color: '#30AF01' },
+                      VN: { users: 2, color: '#30AF01' },
+                      UA: { users: 2, color: '#30AF01' },
+                      JP: { users: 1, color: '#30AF01' },
+                    }
+                  },
+                  flagType: 'emoji',
+                  initialZoom: 0.2,
+                });
+              </script>
+              <h4 class="text-center">Timeline</h4>
+              <ul class="timeline">
+                <li>
+                  <b target="_blank" href="">Text Editor Update (1.2) 🎉</b>
+                  <p class="float-right">29 June, 2023</p>
+                  <p>
+                    Overall improvement in the editing of texts with the all new fully fledged text editor.
+                  </p>
+                </li>
+                <li>
+                  <b target="_blank" href="">Sharing Feature Update (1.1) 🎉</b>
+                  <p class="float-right">29 May, 2023</p>
+                  <p>
+                    With patch 1.1 we implemented the sharing feature for your flashcards. Share them with your friends
+                    and collaborate together.
+                  </p>
+                </li>
+                <li>
+                  <b target="_blank" href="">Kiwi Flashcards initial Release (1.0) 🎉</b>
+                  <p class="float-right">25 March, 2023</p>
+                  <p>
+                    We are excited to announce that Kiwi Flashcards 1.0 has been launched after one intense year of
+                    development.
+                  </p>
+                </li>
+                <li>
+                  <b>Development started 💻</b>
+                  <p class="float-right">2023</p>
+                  <p>Driven by the vastly ongoing digitalization in education we saw the urge to create and learn
+                    flashcards on the iPad. Being students ourselves we wanted to have
+                    all our learning material in one convenient place - our device. So the idea for Kiwi Flashcards was
+                    born.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<footer class="text-center">
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Twitter -->
+      <a class="btn btn-outline-dark btn-floating m-1" href="https://twitter.com/FlashcardsKiwi" role="button">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <!-- Insta -->
+      <a class="btn btn-outline-dark btn-floating m-1" href="https://www.instagram.com/kiwiflashcards" role="button">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </section>
+  </div>
+  <!-- Copyright -->
+  <div class="text-center p-3">
+
+    <p> © 2023 Kiwi Flashcards</p>
+  </div>
+</html>
